@@ -11,7 +11,8 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     AuthModule,
     ConfigModule.forRoot(),
-    MongooseModule.forRoot(process.env.MONGO_URI, {dbName: 'mean-db'}),
+    MongooseModule.forRoot(process.env.MONGO_URI, {dbName: process.env.MONGO_DB_NAME} ),
+    //{dbName: 'mean-db'}
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -20,6 +20,7 @@ async function bootstrap() {
     })
 );
 
-  await app.listen(3000);
+//se ten puerto que use o otorgado, senon o 3000
+  await app.listen(process.env.PORT ?? 3000);
 }
 bootstrap();
