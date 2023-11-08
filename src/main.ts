@@ -7,6 +7,9 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+//senon da fallo no frontend
+  app.enableCors();
+
   //para face ro backend restrinxido, que so acepte informacion coma eu definin 
   //se en postman ponhemos nome en vez de name: error 400 Bad request
   //npm install class-validator class-transformer
